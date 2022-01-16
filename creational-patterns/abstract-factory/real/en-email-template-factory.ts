@@ -14,12 +14,12 @@ import WelcoemEmailTemplate from './templates/en/welcome-email-template';
 
 
 class EnEmailTemplateFactory implements EmailTemplateFactory {
-  createOtpEmailTemplate(): AbstractOtpEmailTemplate {
-    return new OtpEmailTemplate('123456');
+  createOtpEmailTemplate(code: string): AbstractOtpEmailTemplate {
+    return new OtpEmailTemplate(code);
   }
 
-  createWelcomeEmailTemplate(): AbstractWelcoemEmailTemplate {
-    return new WelcoemEmailTemplate('Harry');
+  createWelcomeEmailTemplate(name: string): AbstractWelcoemEmailTemplate {
+    return new WelcoemEmailTemplate(name);
   }
 }
 

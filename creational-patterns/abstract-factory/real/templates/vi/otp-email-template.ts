@@ -8,10 +8,10 @@ import AbstractOtpEmailTemplate from './../abstract-otp-email-template';
 
 class OtpEmailTemplate extends AbstractOtpEmailTemplate {
   toHtml(): string {
-    return `<p>Mã Mã OTP của bạn là ${this.code}</p>`;
+    return `<p>OTP của bạn là ${this.code}</p>`;
   }
   toText(): string {
-    return `Mã Mã OTP của bạn là ${this.code}`;
+    return `OTP của bạn là ${this.code}`;
   }
 }
 

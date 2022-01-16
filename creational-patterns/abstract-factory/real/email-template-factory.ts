@@ -8,8 +8,8 @@ import AbstractOtpEmailTemplate from './templates/abstract-otp-email-template';
 import AbstractWelcoemEmailTemplate from './templates/abstract-welcome-email-template';
 
 interface EmailTemplateFactory {
-  createOtpEmailTemplate(): AbstractOtpEmailTemplate;
-  createWelcomeEmailTemplate(): AbstractWelcoemEmailTemplate;
+  createOtpEmailTemplate(code: string): AbstractOtpEmailTemplate;
+  createWelcomeEmailTemplate(name: string): AbstractWelcoemEmailTemplate;
 }
 
 export default EmailTemplateFactory;

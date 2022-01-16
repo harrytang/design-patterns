@@ -8,10 +8,10 @@ import AbstractWelcomeEmailTemplate from './../abstract-welcome-email-template';
 
 class WelcomeEmailTemplate extends AbstractWelcomeEmailTemplate {
   toHtml(): string {
-    return `<p>Hi ${this.name}Welcome to powerkernel.com</p>`;
+    return `<p>Hi ${this.name}, welcome to powerkernel.com</p>`;
   }
   toText(): string {
-    return `Hi ${this.name}Welcome to powerkernel.com`;
+    return `Hi ${this.name}, welcome to powerkernel.com`;
   }
 }
 

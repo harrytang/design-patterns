@@ -3,8 +3,12 @@ import EnEmailTemplateFactory from "./en-email-template-factory";
 import ViEmailTemplateFactory from "./vi-email-template-factory";
 
 function clientCode(factory: EmailTemplateFactory) {
-  const otpEmailTpl = factory.createOtpEmailTemplate();
-  const welcomeEmailTpl = factory.createWelcomeEmailTemplate();
+  
+  const code = '123456';
+  const name = 'Harry';
+
+  const otpEmailTpl = factory.createOtpEmailTemplate(code);
+  const welcomeEmailTpl = factory.createWelcomeEmailTemplate(name);
 
   console.log(otpEmailTpl.toHtml());
   console.log(welcomeEmailTpl.toHtml());

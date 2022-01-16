@@ -14,13 +14,13 @@
  
  
  class EnEmailTemplateFactory implements EmailTemplateFactory {
-   createOtpEmailTemplate(): AbstractOtpEmailTemplate {
-     return new OtpEmailTemplate('123456');
-   }
- 
-   createWelcomeEmailTemplate(): AbstractWelcoemEmailTemplate {
-     return new WelcoemEmailTemplate('Harry');
-   }
+  createOtpEmailTemplate(code: string): AbstractOtpEmailTemplate {
+    return new OtpEmailTemplate(code);
+  }
+
+  createWelcomeEmailTemplate(name: string): AbstractWelcoemEmailTemplate {
+    return new WelcoemEmailTemplate(name);
+  }
  }
  
  export default EnEmailTemplateFactory;
